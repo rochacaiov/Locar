@@ -1,0 +1,27 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+:root {
+  --whiteoff: #DFDBD9;
+  --black: #212121;
+  --grey: #323232;
+
+  --green: #065446;
+  --lightgreen: #4caf50;
+
+  --error: #ff0033;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style-type: none;
+}
+
+body {
+  background: var(--black);
+}

@@ -1,0 +1,120 @@
+.loginForm {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  width: 350px;
+  background: var(--grey);
+  -webkit-animation: slideBottom 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
+  animation: slideBottom 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
+}
+
+.loginForm h1{
+  float: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--whiteoff);
+  font-size: 40px;
+  border-bottom: 6px solid var(--black);
+  margin-bottom: 50px;
+  padding: 13px;
+}
+
+#inputArea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  max-width: 340px;
+  padding: 20px auto;
+  margin-bottom: 40px;
+}
+
+#inputArea i {
+  grid-column: 1;
+  font-size: 18px;
+  margin: 20px 5px auto;
+  padding-left: 20px;
+
+  text-align: center;
+  border: none;
+  outline: none;
+  color: white;
+
+}
+
+#inputArea input {
+  width: 260px;
+  height: 30px;
+  margin: 15px 10px;
+  font-size: 18px;
+
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #4caf50;
+  color: white;
+}
+
+#inputArea input:focus {
+  border-bottom: 2px solid var(--lightgreen);
+  box-shadow: 0 4px 6px -6px var(--lightgreen);
+}
+#inputArea input:not(:placeholder-shown):invalid {
+  border-bottom: 2px solid var(--error);
+  box-shadow: 0 4px 6px -6px var(--error);
+}
+#inputArea input:focus::placeholder {
+  opacity: 0;
+}
+
+.form button{
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+
+  width: 80%;
+  height: 50px;
+  margin: 20px 40px;
+  padding: 5px;
+  font-size: 18px;
+  border: 2px solid #4caf50;
+  color: var(--whiteoff);
+}
+
+button:hover {
+  background: var(--lightgreen);
+  color: var(--black);
+  box-shadow: 0px 0px 20px var(--lightgreen);
+}
+
+.register {
+  float: right;
+  font-size: 12px;
+  margin: auto 28px 15px auto;
+
+  color: var(--whiteoff);
+}
+
+.register a {
+  text-decoration: none;
+  color: var(--lightgreen);
+}
+
+.register a:hover {
+  text-transform: uppercase;
+}
+
+@keyframes slideBottom {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 100%;
+  }
+}
