@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="register.css">
+
+  <title>Document</title>
+</head>
+<body>
+
+<main>
+  <div class="registerContent">
+    <h1>Registro</h1>
+    <form class="registerForm" action="index.html" method="POST">
+
+      <div class="doubleForm">
+        <input type="text" name="username" placeholder="Usuário" pattern="^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$" required>
+
+        <input type="password" name="password" placeholder="Senha" required>
+
+        <input type="text" name="cpf" placeholder="Cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+
+        <input type="date" name="birthday">
+      </div>
+
+      <div class="singleForm">
+        <input type="text" name="endereco" placeholder="Endereço">
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <span>Já possui uma conta? <a href="#">Logar</a></span>
+
+  </div>
+</main>
+
+
+
+</body>
+</html>
