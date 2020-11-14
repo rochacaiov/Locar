@@ -3,31 +3,31 @@ package ucb.locar.models;
 import java.io.Serializable;
 import java.time.Year;
 
-public class Veiculo implements Serializable{
+public class Vehicle implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private int idVeiculo;
-	private String placa;
+	private int id;
+	private String plate;
 	private String marca;
-	private String modelo;
-	private Year ano;
-	private double valor;
+	private String model;
+	private Year year;
+	private double valuePerDay;
 
-	public Veiculo() {}
+	public Vehicle() {}
 
-	public int getIdVeiculo() {
-		return idVeiculo;
+	public int getId() {
+		return id;
 	}
 
-	public void setIdVeiculo(int idVeiculo) {
-		this.idVeiculo = idVeiculo;
+	public void setId(int idVeiculo) {
+		this.id = idVeiculo;
 	}
 
 	public String getPlaca() {
-		return placa;
+		return plate;
 	}
 
 	public void setPlaca(String placa) {
-		this.placa = placa;
+		this.plate = placa;
 	}
 
 	public String getMarca() {
@@ -39,26 +39,26 @@ public class Veiculo implements Serializable{
 	}
 
 	public String getModelo() {
-		return modelo;
+		return model;
 	}
 
 	public void setModelo(String modelo) {
-		this.modelo = modelo;
+		this.model = modelo;
 	}
 
 	public Year getAno() {
-		return ano;
+		return year;
 	}
 
 	public void setAno(Year ano) {
-		this.ano = ano;
+		this.year = ano;
 	}
 
 	public double getValor() {
-		return valor;
+		return valuePerDay;
 	}
 
 	public void setValor(double valor) {
-		this.valor = valor;
+		this.valuePerDay = valor;
 	}
 }
