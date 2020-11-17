@@ -7,7 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import ucb.locar.exceptions.InvalidLoginException;
+import ucb.locar.enums.PermissionEnum;
+import ucb.locar.exceptions.UserNotFoundException;
 import ucb.locar.models.User;
 
 public class UserDAO implements Serializable{
@@ -19,17 +20,18 @@ public class UserDAO implements Serializable{
 	}
 	
 	public int insert(User user) {
-		String sql="INSERT INTO cliente (idCliente, nome, dataNascimento, cpf, endereco) values (?, ?, ?, ?, ?, ?)";
+		String sql="INSERT INTO cliente (username, password, cpf, address, birthday, permission) values (?, ?, ?, ?, ?, ?)";
 		PreparedStatement stmt;
 		
 		if (user != null) {
 			try {
 				stmt = con.prepareStatement(sql);
-				stmt.setInt(1, user.getId());
-				stmt.setString(2, user.getUsername());
-				stmt.setDate(3, new Date(user.getBirthday().getTime()));
-				stmt.setString(4, user.getCpf());
-				stmt.setString(5, user.getAddress());
+				stmt.setString(1, user.getUsername());
+				stmt.setString(2, user.getPassword());
+				stmt.setString(3, user.getCpf());
+				stmt.setString(4, user.getAddress());
+				stmt.setDate(5, new Date(user.getBirthday().getTime()));
+				stmt.setString(6, user.getPermission().toString());
 				
 				int retorno = stmt.executeUpdate();
 				stmt.close();
@@ -41,7 +43,36 @@ public class UserDAO implements Serializable{
 		return 0;
 	}
 	
-	public User read(String username, String password) throws InvalidLoginException {
+	public User findById(int id) throws UserNotFoundException {
+		String sql = "SELECT * FROM user WHERE id=?";
+		PreparedStatement stmt;
+		User user = new User();
+		
+		try {
+			stmt = this.con.prepareStatement(sql);
+			stmt.setInt(1, id);
+			ResultSet rs = stmt.executeQuery();
+			if (rs.first()) {
+				user.setId(rs.getInt("id"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
+				user.setCpf(rs.getString("cpf"));
+				user.setAddress(rs.getString("address"));
+				user.setBirthday(rs.getDate("birthday"));
+				user.setPermission(PermissionEnum.valueOf(rs.getString("permission")));
+				
+				rs.close();
+				stmt.close();
+				return user;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		throw new UserNotFoundException();
+	}
+	
+	public User findUserByAuth(String username, String password) throws UserNotFoundException {
 		String sql = "SELECT * FROM user WHERE username=? AND password=?";
 		PreparedStatement stmt;
 		User user = new User();
@@ -56,18 +87,19 @@ public class UserDAO implements Serializable{
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("password"));
 				user.setCpf(rs.getString("cpf"));
-				user.setAddress(rs.getString("endereco"));
-				user.setBirthday(rs.getDate("dataNascimento"));
+				user.setAddress(rs.getString("address"));
+				user.setBirthday(rs.getDate("birthday"));
+				user.setPermission(PermissionEnum.valueOf(rs.getString("permission")));
+				
 				rs.close();
 				stmt.close();
 				return user;
 			}
-			throw new InvalidLoginException();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		throw new UserNotFoundException();
 	}
 
 }

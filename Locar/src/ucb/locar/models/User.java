@@ -3,15 +3,18 @@ package ucb.locar.models;
 import java.io.Serializable;
 import java.util.Date;
 
+import ucb.locar.enums.PermissionEnum;
+
 
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private int id;
+	private long id;
 	private String username;
 	private String password;
 	private String cpf;
 	private String address;
 	private Date birthday;
+	private PermissionEnum permission; //ADMIN OR USER
 
 	public User() {}
 
@@ -20,11 +23,11 @@ public class User implements Serializable{
 		this.password = password;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -66,6 +69,14 @@ public class User implements Serializable{
 
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
+	}
+
+	public PermissionEnum getPermission() {
+		return permission;
+	}
+
+	public void setPermission(PermissionEnum permission) {
+		this.permission = permission;
 	}
 
 	@Override

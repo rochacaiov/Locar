@@ -4,61 +4,97 @@ import java.io.Serializable;
 import java.time.Year;
 
 public class Vehicle implements Serializable{
-	private static final long serialVersionUID = 1L;
-	private int id;
+	private static final long serialVersionUID = 1L;	
+	private long id;
+	private int people;
+	private long velocity;
+	private long power;
 	private String plate;
-	private String marca;
 	private String model;
+	private String producer;
 	private Year year;
 	private double valuePerDay;
+	private boolean available;
 
 	public Vehicle() {}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int idVeiculo) {
-		this.id = idVeiculo;
+	public void setId(long id) {
+		this.id = id;
 	}
 
-	public String getPlaca() {
+	public int getPeople() {
+		return people;
+	}
+
+	public void setPeople(int people) {
+		this.people = people;
+	}
+
+	public long getVelocity() {
+		return velocity;
+	}
+
+	public void setVelocity(long velocity) {
+		this.velocity = velocity;
+	}
+
+	public long getPower() {
+		return power;
+	}
+
+	public void setPower(long power) {
+		this.power = power;
+	}
+
+	public String getPlate() {
 		return plate;
 	}
 
-	public void setPlaca(String placa) {
-		this.plate = placa;
+	public void setPlate(String plate) {
+		this.plate = plate;
 	}
 
-	public String getMarca() {
-		return marca;
-	}
-
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
-
-	public String getModelo() {
+	public String getModel() {
 		return model;
 	}
 
-	public void setModelo(String modelo) {
-		this.model = modelo;
+	public void setModel(String model) {
+		this.model = model;
 	}
 
-	public Year getAno() {
+	public String getProducer() {
+		return producer;
+	}
+
+	public void setProducer(String producer) {
+		this.producer = producer;
+	}
+
+	public Year getYear() {
 		return year;
 	}
 
-	public void setAno(Year ano) {
-		this.year = ano;
+	public void setYear(Year year) {
+		this.year = year;
 	}
 
-	public double getValor() {
+	public double getValuePerDay() {
 		return valuePerDay;
 	}
 
-	public void setValor(double valor) {
-		this.valuePerDay = valor;
+	public void setValuePerDay(double valuePerDay) {
+		this.valuePerDay = valuePerDay;
+	}
+
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
 	}
 }

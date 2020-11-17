@@ -11,66 +11,54 @@ public class Rent implements Serializable{
 	private Date dropoffDate;
 	private User user;
 	private Vehicle vehicle;
-	private boolean pickedUp;
 	
 	public Rent() {}
 
-	
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int idAluguel) {
-		this.id = idAluguel;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public double getValorTotal() {
+	public double getTotalValue() {
 		return totalValue;
 	}
 
-	public void setValorTotal(double valorTotal) {
-		this.totalValue = valorTotal;
+	public void setTotalValue(double totalValue) {
+		this.totalValue = totalValue;
 	}
 
-	public Date getDataRetirada() {
+	public Date getPickupDate() {
 		return pickupDate;
 	}
 
-	public void setDataRetirada(Date dataRetirada) {
-		this.pickupDate = dataRetirada;
+	public void setPickupDate(Date pickupDate) {
+		this.pickupDate = pickupDate;
 	}
 
-	public Date getDataDevolucao() {
+	public Date getDropoffDate() {
 		return dropoffDate;
 	}
 
-	public void setDataDevolucao(Date dataDevolucao) {
-		this.dropoffDate = dataDevolucao;
+	public void setDropoffDate(Date dropoffDate) {
+		this.dropoffDate = dropoffDate;
 	}
 
-	public User getCliente() {
+	public User getUser() {
 		return user;
 	}
 
-	public void setCliente(User cliente) {
-		this.user = cliente;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	public Vehicle getVeiculo() {
+	public Vehicle getVehicle() {
 		return vehicle;
 	}
 
-	public void setVeiculo(Vehicle veiculo) {
-		this.vehicle = veiculo;
-	}
-
-
-	public boolean isRetirado() {
-		return pickedUp;
-	}
-
-
-	public void setRetirado(boolean retirado) {
-		this.pickedUp = retirado;
+	public void setVehicle(Vehicle vehicle) {
+		this.vehicle = vehicle;
 	}
 }

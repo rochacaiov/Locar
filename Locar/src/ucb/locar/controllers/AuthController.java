@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import ucb.locar.dao.DAOFactory;
 import ucb.locar.dao.UserDAO;
 import ucb.locar.enums.PageEnum;
-import ucb.locar.exceptions.InvalidLoginException;
+import ucb.locar.enums.PermissionEnum;
+import ucb.locar.exceptions.UserNotFoundException;
 import ucb.locar.models.User;
 
 @WebServlet(name="Auth", urlPatterns= {"/auth", "/auth/register"})
@@ -34,14 +35,16 @@ public class AuthController extends HttpServlet {
 				String password = request.getParameter("password");
 				
 				try {
-					user = userDAO.read(username, password);
-					request.getSession().setAttribute("user", user);
-					if("admin".equals(user.getUsername()) && "123".equals(user.getPassword())) {
-						response.sendRedirect(PageEnum.ADMIN_HOME.getPath());
-						break;
+					user = userDAO.findUserByAuth(username, password);
+					
+					if(user.getPermission().equals(PermissionEnum.ADMIN)) {
+						response.sendRedirect("rents");
+						return; 
 					}
-					response.sendRedirect(PageEnum.USER_HOME.getPath());
-				} catch (InvalidLoginException e) {
+					
+					request.getSession().setAttribute("user", user);
+					response.sendRedirect("vehicles");
+				} catch (UserNotFoundException e) {
 					request.setAttribute("error", e.getMessage());
 					dispatcher = request.getRequestDispatcher(PageEnum.LOGIN.getPath());
 					dispatcher.forward(request,  response);
