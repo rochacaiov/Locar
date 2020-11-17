@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ucb.locar.dao.RentDAO;
-import ucb.locar.enums.PageEnum;
 import ucb.locar.models.Rent;
 
 @WebServlet(name="Rent", urlPatterns={"/rent", "/rents"})
