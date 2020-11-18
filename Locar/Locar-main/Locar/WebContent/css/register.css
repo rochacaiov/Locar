@@ -1,0 +1,170 @@
+input, input::placeholder {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: none;
+
+  height: 30px;
+  border-bottom: 1px solid #4caf50;
+  color: var(--whiteoff);
+}
+
+input:focus::placeholder{
+  color: transparent;
+}
+
+button{
+  position: relative;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+  justify-content: center;
+
+  width: 80%;
+  height: 50px;
+  margin: 60px 60px 15px 46px;
+  padding: 5px;
+  font-size: 18px;
+  border: 2px solid #4caf50;
+  color: var(--whiteoff);
+}
+
+button:hover {
+  background: var(--lightgreen);
+  color: var(--black);
+  box-shadow: 0px 0px 20px var(--lightgreen);
+}
+
+.registerContent {
+  position: absolute;
+  overflow: hidden;
+  width: 500px;
+  height: 70%;
+  top: 50%;
+  left: 32%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+
+  background: var(--grey);
+
+  -webkit-animation: slideBottom 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
+  animation: slideBottom 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
+}
+
+.registerContent h1 {
+  float: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--whiteoff);
+  font-size: 40px;
+  border-bottom: 6px solid var(--black);
+  margin-bottom: 50px;
+  padding: 13px;
+}
+
+.registerForm {
+  position: relative;
+  margin: 0 auto;
+  width: 450px;
+}
+
+.doubleForm {
+  display: grid;
+  justify-content: center;
+
+  width: 450px;
+
+  margin: 0 auto;
+  padding: 10px 0px 30px 0px;
+
+  grid-template-columns: 0fr 0fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+.singleForm {
+  display: flex;
+  justify-content: center;
+}
+.singleForm input {
+  text-align: center;
+  width: 370px;
+}
+
+.registerContent span {
+  float: right;
+  font-size: 12px;
+  margin: auto 28px;
+
+  color: var(--whiteoff);
+}
+.registerContent a {
+  text-decoration: none;
+  color: var(--lightgreen);
+}
+.registerContent a:hover{
+  text-transform: uppercase;
+}
+
+input:focus {
+  border-bottom: 2px solid var(--lightgreen);
+  box-shadow: 0 4px 6px -6px var(--lightgreen);
+}
+input:not(:placeholder-shown):invalid {
+  border-bottom: 2px solid var(--error);
+  box-shadow: 0 4px 6px -6px var(--error);
+}
+input:focus::placeholder {
+  opacity: 0;
+}
+
+@keyframes slideBottom {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 100%;
+  }
+}
+
+/*
+.input {
+  position: relative;
+  align-items: center;
+  float: center;
+  align-content: center;
+  align-self: center;
+  margin: 0 auto;
+  padding: 10px;
+
+  background: black;
+}
+
+.registerForm input {
+  width: 260px;
+  height: 30px;
+  margin: 15px 10px;
+  font-size: 15px;
+
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #4caf50;
+  color: white;
+}
+
+
+.form_wrap .input_grp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_wrap .input_grp input[type="text"], input[type="password"], input[type="date"] {
+  width: 140px;
+}
+*/
