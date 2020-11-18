@@ -64,3 +64,12 @@ VALUES (2, 330, 610, "JQQ-5809", "R8", "Audi", 2021, 90.00, 1);
 
 INSERT INTO `vehicle` (`people`, `velocity`, `power`, `plate`, `model`, `producer`, `year`, `value_day`, `available`)
 VALUES (5, 190, 170, "JCK-8823", "ASX", "Mitsubishi ", 2021, 50.00, 1);
+
+INSERT INTO `vehicle` (`people`, `velocity`, `power`, `plate`, `model`, `producer`, `year`, `value_day`, `available`)
+VALUES (5, 190, 170, "JJV-4733", "IX35", "Hyundai ", 2021, 70.00, 1);
+
+INSERT INTO `vehicle` (`people`, `velocity`, `power`, `plate`, `model`, `producer`, `year`, `value_day`, `available`)
+VALUES (5, 175, 170, "CPP-4425", "Toro", "Fiat ", 2020, 60.00, 1);
+
+INSERT INTO `vehicle` (`people`, `velocity`, `power`, `plate`, `model`, `producer`, `year`, `value_day`, `available`)
+VALUES (5, 250, 466, "CGG-4973", "Mustang", "Ford ", 2020, 80.00, 1);
