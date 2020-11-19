@@ -74,23 +74,24 @@ VALUES (5, 175, 170, "CPP-4425", "Toro", "Fiat ", 2020, 60.00, 1);
 INSERT INTO `vehicle` (`people`, `velocity`, `power`, `plate`, `model`, `producer`, `year`, `value_day`, `available`)
 VALUES (5, 250, 466, "CGG-4973", "Mustang", "Ford ", 2020, 80.00, 1);
 
-INSERT INTO `rent` (`totalValue`, `pickupDate`, `dropoffDate`, ` user `, ` vehicle`)
-VALUES (250, 18-03-2020, 25-03-2020, "Camila de Lima", " BMW);
+INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
+VALUES (250, 2020-03-18, 2020-03-25, "Camila de Lima", " BMW);
+	
+INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
+VALUES (500, 2020-03-18, 2020-03-25, "Fernando Silva", " Jetta);
 
-INSERT INTO `rent` (`totalValue`, `pickupDate`, `dropoffDate`, ` user `, ` vehicle`)
-VALUES (500, 18-03-2020, 25-03-2020, "Fernando Silva", " Jetta");
+INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
+VALUES (300, 2020-03-16, 2020-03-21, "Paulo Roberto", " Mustang);
+	
+INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
+VALUES (600, 2020-04-07, 2020-04-14, "Fernando Silva", " Toro);
 
-INSERT INTO `rent` (`totalValue`, `pickupDate`, `dropoffDate`, ` user `, ` vehicle`)
-VALUES (300, 16-03-2020, 21-03-2020, "Paulo Roberto", " Mustang");
+INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
+VALUES (100, 2020-05-14, 2020-05-16, "Roberto Bezerra", " IX35);
+	
+INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
+VALUES (270, 2020-05-15, 2020-05-20, "Pamela Fernandes", " ASX);
 
-INSERT INTO `rent` (`totalValue`, `pickupDate`, `dropoffDate`, ` user `, ` vehicle`)
-VALUES (600, 07-04-2020, 14-04-2020, "Fernando Silva", " Toro");
+INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
+VALUES (250, 2020-06-03, 2020-06-07, "Geraldo Alberto", " R8);
 
-INSERT INTO `rent` (`totalValue`, `pickupDate`, `dropoffDate`, ` user `, ` vehicle`)
-VALUES (100, 14-05-2020, 16-05-2020, "Roberto Bezerra", " IX35");
-
-INSERT INTO `rent` (`totalValue`, `pickupDate`, `dropoffDate`, ` user `, ` vehicle`)
-VALUES (270, 15-05-2020, 20-05-2020, "Pamela Fernandes", " ASX");
-
-INSERT INTO `rent` (`totalValue`, `pickupDate`, `dropoffDate`, ` user `, ` vehicle`)
-VALUES (250, 03-06-2020, 07-06-2020, "Geraldo Alberto", " R8");
