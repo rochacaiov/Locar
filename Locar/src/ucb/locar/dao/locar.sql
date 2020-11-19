@@ -84,14 +84,40 @@ INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, �
 VALUES (300, 2020-03-16, 2020-03-21, "Paulo Roberto", " Mustang);
 	
 INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
-VALUES (600, 2020-04-07, 2020-04-14, "Fernando Silva", " Toro);
+VALUES (600, 2020-04-07, 2020-04-14, "Fernando Silva", " Toro");
 
 INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
-VALUES (100, 2020-05-14, 2020-05-16, "Roberto Bezerra", " IX35);
+VALUES (100, 2020-05-14, 2020-05-16, 'Roberto Bezerra', " IX35");
 	
 INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
-VALUES (270, 2020-05-15, 2020-05-20, "Pamela Fernandes", " ASX);
+VALUES (270, 2020-05-15, 2020-05-20, "Pamela Fernandes", " ASX");
 
 INSERT INTO ‘rent’ (‘totalValue’, ‘pickupDate’, ‘dropoffDate’, ‘ user ‘, ‘ vehicle’)
-VALUES (250, 2020-06-03, 2020-06-07, "Geraldo Alberto", " R8);
+VALUES (250, 2020-06-03, 2020-06-07, "Geraldo Alberto", " R8");
+	
+INSERT INTO ‘User’ (‘username’, ‘password’, ‘cpf’, ‘adress’, ‘birthday’, ‘permission’)
+VALUES (‘FernandoSilva’, 15425**, 45821497324, ‘3 Vere Street', 'W1G DH’, 1978-05-18, ‘User’);
+
+INSERT INTO ‘User’ (‘username’, ‘password’, ‘cpf’, ‘adress’, ‘birthday’, ‘permission’)
+VALUES (‘PauloRoberto’,548556**, 449985151511, ‘3 Vere Street ‘, 1997-10-10, ‘User’);
+
+
+INSERT INTO ‘User’ (‘username’, ‘password’, ‘cpf’, ‘adress’, ‘birthday’, ‘permission’)
+VALUES (‘RobertoBezerra’, 454885**, 515489484844, ‘3 Vere Street ‘, 1986-02-20, ‘User’);
+
+
+INSERT INTO ‘User’ (‘username’, ‘password’, ‘cpf’, ‘adress’, ‘birthday’, ‘permission’)
+VALUES (‘PamelaFernandes’, 54844**, 54845644848, ‘3 Vere Street Woodrow’, 1984-12-4, ‘User’);
+
+
+INSERT INTO ‘User’ (‘username’, ‘password’, ‘cpf’, ‘adress’, ‘birthday’, ‘permission’)
+VALUES (‘GeraldoAlberto’, 548556**, 449985151511, ‘4 Vere Street ‘, 1956-06-03, ‘User’);
+
+
+INSERT INTO ‘User’ (‘username’, ‘password’, ‘cpf’, ‘adress’, ‘birthday’, ‘permission’)
+VALUES (‘WilliamRoberto’, 44848**, 8858484848, ‘3 Vere Street ‘, 1991-04-04, ‘Admin’);
+
+
+
+
 
